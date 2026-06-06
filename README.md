@@ -1,31 +1,72 @@
 # Salary Prediction MLOps Project
 
-## Objective
+## Project Objective
 
-Predict employee salary using:
+Build an end-to-end MLOps pipeline on AWS to predict employee salary based on:
 
-- YearsExperience
-- Age
+* YearsExperience
+* Age
 
-## AWS Services
+Target Variable:
 
-- S3
-- AWS Glue
-- SageMaker Feature Store
-- SageMaker Pipelines
-- SageMaker Model Registry
-- ECR
-- EKS
+* Salary
 
-## Deployment
+## Tech Stack
 
-- FastAPI
-- Docker
-- Kubernetes
-- Canary Deployment
+### Infrastructure
 
-## Monitoring
+* Terraform
+* AWS IAM
+* AWS S3
 
-- CloudWatch
-- Prometheus
-- Grafana
+### Data Engineering
+
+* AWS Glue
+* SageMaker Feature Store
+
+### Machine Learning
+
+* SageMaker Studio
+* SageMaker Processing Jobs
+* SageMaker Training Jobs
+* SageMaker Pipelines
+* SageMaker Experiments
+* SageMaker Model Registry
+* SageMaker Clarify
+
+### Deployment
+
+* FastAPI
+* Docker
+* Amazon ECR
+* Amazon EKS
+
+### Monitoring
+
+* CloudWatch
+* Prometheus
+* Grafana
+* SageMaker Model Monitor
+
+### Deployment Strategy
+
+* Canary Deployment using Argo Rollouts
+
+## Project Workflow
+
+Local CSV
+→ S3
+→ Glue ETL
+→ Feature Store
+→ Data Validation
+→ Train/Test Split
+→ Model Training
+→ Model Evaluation
+→ Model Registry
+→ FastAPI
+→ Docker
+→ ECR
+→ EKS
+→ Monitoring
+→ Drift Detection
+→ Retraining
