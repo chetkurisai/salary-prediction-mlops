@@ -27,6 +27,14 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
 
+      - name: Debug Repository
+        run: |
+          pwd
+          ls -la
+          echo "----------------------"
+          find . -maxdepth 3 -type f
+
+
       # Build Docker Image
       - name: Build Docker Image
         run: |
