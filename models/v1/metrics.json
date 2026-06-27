@@ -1,0 +1,5 @@
+{
+  "model_name": "LinearRegression",
+  "mae": 4694.07,
+  "r2_score": 0.9812
+}

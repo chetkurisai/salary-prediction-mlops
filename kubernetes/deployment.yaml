@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: salary-api
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: salary-api
+
+  template:
+    metadata:
+      labels:
+        app: salary-api
+
+    spec:
+      containers:
+      - name: salary-api
+
+        image: 445411728398.dkr.ecr.us-east-2.amazonaws.com/salary-prediction-api:latest
+
+        ports:
+        - containerPort: 8000

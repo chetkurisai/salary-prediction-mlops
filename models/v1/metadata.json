@@ -1,0 +1,7 @@
+{
+  "version": "v1",
+  "algorithm": "LinearRegression",
+  "created_by": "Sai",
+  "status": "Approved",
+  "artifact": "salary_model.pkl"
+}
